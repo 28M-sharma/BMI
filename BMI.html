@@ -1,0 +1,45 @@
+<HTML>
+<HEAD> <TITLE> Calculate your BMI </TITLE>
+<SCRIPT langauge="JavaScript">
+function BMI()
+{
+var a = document.f1.height.value
+var b = document.f1.weight.value
+var c = a/100
+var d = c*c
+var e = b/d
+document.f1.bmi.value = e
+if (e<18.5)
+{
+alert ("UNDERWEIGHT!")
+}
+else if (e>=18.5 && e<=25)
+{
+alert ("NORMAL!")
+}
+else if (e>25)
+{
+alert ("OVERWEIGHT")
+}
+else
+{
+alert ("Please fill the boxes with proper data")
+}
+}
+</SCRIPT>
+</HEAD>
+<BODY bgcolor="PINK" text="COMIC SANS MS" >
+<CENTER>
+<H1> Calculate your BMI  </H1> 
+<FORM name="f1">
+<BR> 
+<FONT size="5">
+Enter height : <INPUT type="text" size="8" name="height"> centimetres <BR> <BR>
+Enter weight : <INPUT type="text" size="8" name="weight"> kilograms <BR> <BR> 
+<INPUT type="button" value="Find your BMI now" onClick="BMI()"> <BR> <BR>
+Your BMI is : <INPUT type="text" size="20" name="bmi">
+</FONT>
+</CENTER>
+</FORM>
+</BODY>
+</HTML>
